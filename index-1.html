@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holdfast: Phone cases for iPhone, Galaxy and Pixel</title>
+  <meta name="description" content="Phone cases for iPhone, Galaxy and Pixel. Choose your phone and see the cases that fit it.">
+  <meta name="theme-color" content="#15201C">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#shop">Skip to the shop</a>
+
+  <div id="page">
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="index.html">Holdfast</a>
+        <nav class="nav" aria-label="Main">
+          <a href="#shop">Shop</a>
+          <a href="#fit">Fit and sizing</a>
+        </nav>
+        <div class="fit">
+          <label for="model">Your phone</label>
+          <select id="model" name="model"></select>
+        </div>
+        <button class="btn-quiet" id="cartOpen" type="button" aria-haspopup="dialog">
+          Cart (<span id="cartCount">0</span>)
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-text">
+          <h1 id="heroTitle">Pick your phone. See the cases that fit it.</h1>
+          <p>Six styles for iPhone, Galaxy and Pixel. Every case is made for one phone model, so the cases in the shop are the ones that fit yours.</p>
+          <a class="btn" href="#shop">Shop cases</a>
+        </div>
+        <div class="hero-art" id="heroArt"></div>
+      </section>
+
+      <section class="section" id="shop" aria-labelledby="shopTitle">
+        <div class="wrap">
+          <h2 id="shopTitle">Cases for your phone</h2>
+          <p class="lede" id="shopLede"></p>
+          <div class="grid" id="grid">
+            <noscript><p class="empty-note">The shop needs JavaScript to show products. Please turn it on and reload the page.</p></noscript>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" id="fit" aria-labelledby="fitTitle">
+        <div class="wrap two">
+          <h2 id="fitTitle">Fit and sizing</h2>
+          <div>
+            <p>Each case is made for a single phone model. Choose yours with the Your phone menu at the top of the page. The shop then shows the cases for that model, with the camera cutout drawn for that phone's brand.</p>
+            <p>Your choice is saved with every item in your cart, so each cart line says which phone it is for. The case artwork is schematic: it shows camera layout by brand, not exact dimensions.</p>
+            <p>Shipping, returns and payment are covered in the <a href="terms.html">Terms and conditions</a>. How we handle your data is in the <a href="privacy.html">Privacy policy</a>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-row">
+          <a class="brand" href="index.html">Holdfast</a>
+          <a href="mailto:hello@example.com">hello@example.com</a>
+          <nav class="footer-links" aria-label="Legal">
+            <a href="privacy.html">Privacy policy</a>
+            <a href="terms.html">Terms and conditions</a>
+          </nav>
+        </div>
+        <p class="copy">&copy; 2026 Holdfast. Prices are in US dollars.</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+  <aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+    <div class="cart-head">
+      <h2 id="cartTitle">Your cart</h2>
+      <button class="btn-quiet" id="cartClose" type="button">Close</button>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-foot">
+      <p class="subtotal"><span>Subtotal</span><span id="subtotal">$0.00</span></p>
+      <p class="note">Shipping and tax are added at checkout.</p>
+      <button class="btn" id="checkout" type="button" disabled>Checkout</button>
+      <p class="note" id="checkoutNote"></p>
+    </div>
+  </aside>
+
+  <p class="sr" id="live" role="status" aria-live="polite"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
